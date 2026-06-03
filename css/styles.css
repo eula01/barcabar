@@ -198,7 +198,8 @@ a:hover {
   min-height: 50vh;
   display: flex;
   align-items: center;
-  padding: clamp(2.5rem, 8vw, var(--section-space)) 0;
+  padding-top: clamp(2.5rem, 8vw, var(--section-space));
+  padding-bottom: clamp(2.5rem, 8vw, var(--section-space));
 }
 
 .hero .logo-text {
@@ -218,7 +219,8 @@ a:hover {
 
 /* Sections */
 .section {
-  padding: var(--section-space) 0;
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
 }
 
 .section-title {
@@ -274,7 +276,8 @@ a:hover {
 
 /* Drinks */
 .drinks-header {
-  padding: calc(var(--section-space) * 0.6) 0 var(--section-space);
+  padding-top: calc(var(--section-space) * 0.6);
+  padding-bottom: var(--section-space);
 }
 
 .drinks-title {
@@ -326,7 +329,8 @@ a:hover {
 
 /* Upcoming */
 .upcoming-header {
-  padding: calc(var(--section-space) * 0.6) 0 3rem;
+  padding-top: calc(var(--section-space) * 0.6);
+  padding-bottom: 3rem;
 }
 
 .upcoming-title {
@@ -447,7 +451,8 @@ a:hover {
 
 /* Footer */
 .site-footer {
-  padding: var(--section-space) 0 3rem;
+  padding-top: var(--section-space);
+  padding-bottom: 3rem;
   font-size: 0.75rem;
 }
 
@@ -650,6 +655,7 @@ a:hover {
   }
 
   .site-footer {
+    padding-top: var(--section-space);
     padding-bottom: calc(2rem + var(--safe-bottom));
   }
 
@@ -657,6 +663,11 @@ a:hover {
     min-height: auto;
     padding-top: clamp(2rem, 6vw, 3rem);
     padding-bottom: clamp(2rem, 6vw, 3rem);
+  }
+
+  main.page > .wrap {
+    padding-left: max(var(--page-padding), var(--safe-left));
+    padding-right: max(var(--page-padding), var(--safe-right));
   }
 
   .hero .logo-text {

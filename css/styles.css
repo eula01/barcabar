@@ -2,6 +2,7 @@
   --blue: #2260a5;
   --success: #1a6b3c;
   --max-width: 1400px;
+  --page-padding: clamp(1rem, 4vw, 3rem);
   --col-gap: clamp(1.5rem, 4vw, 4rem);
   --section-space: clamp(4rem, 10vw, 8rem);
   --header-h: 3.5rem;
@@ -59,14 +60,18 @@ a:hover {
   left: 0;
   right: 0;
   z-index: 100;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.75rem 1rem;
-  padding: calc(0.75rem + var(--safe-top)) calc(1rem + var(--safe-right))
-    calc(0.75rem + var(--safe-bottom)) calc(1rem + var(--safe-left));
+  padding-top: calc(0.75rem + var(--safe-top));
+  padding-bottom: 0.75rem;
   background: #fff;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  width: 100%;
 }
 
 .site-header nav {
@@ -98,10 +103,6 @@ a:hover {
 }
 
 @media (min-width: 769px) {
-  .site-header {
-    flex-wrap: nowrap;
-  }
-
   .site-header nav {
     flex-wrap: nowrap;
   }
@@ -176,9 +177,8 @@ a:hover {
 .wrap {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 clamp(1rem, 4vw, 3rem);
-  padding-left: max(clamp(1rem, 4vw, 3rem), var(--safe-left));
-  padding-right: max(clamp(1rem, 4vw, 3rem), var(--safe-right));
+  padding-left: max(var(--page-padding), var(--safe-left));
+  padding-right: max(var(--page-padding), var(--safe-right));
 }
 
 .grid-3 {
@@ -589,7 +589,8 @@ a:hover {
 @media (max-width: 768px) {
   :root {
     --section-space: clamp(2.5rem, 8vw, 4rem);
-    --header-h: 5.5rem;
+    --page-padding: 1.5rem;
+    --header-h: 3.25rem;
   }
 
   .site-header {
@@ -597,32 +598,59 @@ a:hover {
     padding-bottom: 0.65rem;
   }
 
+  .header-inner {
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .header-inner::-webkit-scrollbar {
+    display: none;
+  }
+
   .site-header nav {
-    flex: 1 1 100%;
-    order: 2;
-    gap: 0.5rem 1rem;
-    font-size: 0.7rem;
+    flex: 0 1 auto;
+    flex-wrap: nowrap;
+    gap: 0.5rem 0.75rem;
+    font-size: 0.625rem;
+    min-width: 0;
   }
 
   .header-actions {
-    order: 1;
+    flex: 0 0 auto;
     margin-left: auto;
-    gap: 0.5rem;
-    flex-shrink: 0;
+    gap: 0.35rem;
   }
 
-  .site-header nav {
-    min-height: 2.5rem;
+  .lang-btn {
+    min-width: 1.65rem;
+    min-height: 1.5rem;
+    padding: 0.15rem;
   }
 
   .lang-btn svg {
-    width: 1.35rem;
-    height: 0.9rem;
+    width: 1.2rem;
+    height: 0.8rem;
+  }
+
+  .site-header nav a,
+  .site-header button#newsletter-open {
+    min-height: 2rem;
+    padding: 0.2rem 0;
   }
 
   .site-header button#newsletter-open {
-    min-height: 2.5rem;
-    font-size: 0.7rem;
+    font-size: 0.625rem;
+  }
+
+  .site-header nav a[data-i18n],
+  #newsletter-open[data-i18n] {
+    min-width: 0 !important;
+  }
+
+  .site-footer {
+    padding-bottom: calc(2rem + var(--safe-bottom));
   }
 
   .hero {
@@ -670,10 +698,6 @@ a:hover {
     font-size: 0.75rem;
   }
 
-  .site-footer {
-    padding-bottom: calc(2rem + var(--safe-bottom));
-  }
-
   .footer-links a {
     display: inline-block;
     padding: 0.2rem 0;
@@ -682,10 +706,18 @@ a:hover {
 }
 
 @media (max-width: 380px) {
+  :root {
+    --page-padding: 1.25rem;
+  }
+
   .site-header nav {
-    font-size: 0.65rem;
-    letter-spacing: 0.04em;
-    gap: 0.4rem 0.75rem;
+    font-size: 0.575rem;
+    letter-spacing: 0.03em;
+    gap: 0.35rem 0.5rem;
+  }
+
+  .site-header button#newsletter-open {
+    font-size: 0.575rem;
   }
 }
 

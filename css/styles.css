@@ -36,10 +36,25 @@ body {
   overflow-x: hidden;
 }
 
-/* Home cover */
+/*
+  Home cover
+  Image is 1080×1350 (4:5 = 0.8).
+
+  iPhone CSS viewports are ~0.46–0.56 (e.g. 390×844, 375×667) — taller
+  than 4:5 — so contain letterboxes top/bottom. Cover crops left/right
+  instead; lions stay centered so that crop is fine.
+
+  Strategy:
+  - Tall / small screens (phones, portrait tablets): COVER the viewport
+    (no top/bottom bars). Stage is larger than the viewport on the
+    horizontal axis and centered.
+  - Wide screens (desktop, landscape tablets): CONTAIN so the full
+    image stays visible; side bars use the parchment background.
+*/
 body.home-cover {
   background: #d4cfc4;
   overflow: hidden;
+  height: 100%;
   height: 100dvh;
 }
 
@@ -52,17 +67,34 @@ body.home-cover {
   overflow: hidden;
 }
 
+/* Default: contain (full image, possible side bars) */
 .cover-stage {
   position: relative;
+  flex-shrink: 0;
   width: min(100vw, calc(100dvh * 1080 / 1350));
   height: min(100dvh, calc(100vw * 1350 / 1080));
+}
+
+/* Cover when the viewport is taller/narrower than 4:5, or phone-sized */
+@media (max-aspect-ratio: 1080 / 1350), (max-width: 768px) {
+  .cover-stage {
+    width: max(100vw, calc(100dvh * 1080 / 1350));
+    height: max(100dvh, calc(100vw * 1350 / 1080));
+  }
+}
+
+/* Large desktop: keep contain, nudge type up slightly with the stage */
+@media (min-width: 1025px) {
+  .hotspot {
+    font-size: clamp(1.1rem, 1.35vw, 1.6rem);
+  }
 }
 
 .cover-img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: fill;
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
@@ -82,7 +114,7 @@ body.home-cover {
   align-items: center;
   justify-content: center;
   font-family: "IBM Plex Mono", "Courier New", monospace;
-  font-size: clamp(0.95rem, 3.2vw, 1.6rem);
+  font-size: clamp(0.85rem, 3.6vw, 1.45rem);
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -104,7 +136,7 @@ body.home-cover {
 }
 
 .hotspot--menu {
-  top: 17%;
+  top: calc(17% + 50px);
 }
 
 .hotspot--blog {
@@ -112,7 +144,7 @@ body.home-cover {
 }
 
 .hotspot--about {
-  top: 62%;
+  top: calc(62% - 5px);
 }
 
 .cover-address {
@@ -130,6 +162,17 @@ body.home-cover {
   letter-spacing: 0.02em;
   color: rgba(40, 48, 58, 0.72);
   pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .hotspot {
+    font-size: clamp(0.8rem, 4.2vw, 1.1rem);
+    letter-spacing: 0.12em;
+  }
+
+  .cover-address {
+    font-size: 0.55rem;
+  }
 }
 
 /* About */

@@ -36,6 +36,118 @@ body {
   overflow-x: hidden;
 }
 
+/* Home cover */
+body.home-cover {
+  background: #d4cfc4;
+  overflow: hidden;
+  height: 100dvh;
+}
+
+.cover {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.cover-stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max(100vw, calc(100dvh * 1080 / 1350));
+  height: max(100dvh, calc(100vw * 1350 / 1080));
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: fill;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.cover-hotspots {
+  position: absolute;
+  inset: 0;
+}
+
+.hotspot {
+  position: absolute;
+  left: 28%;
+  width: 44%;
+  height: 18%;
+  display: block;
+  color: transparent;
+  font-size: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 2%;
+}
+
+.hotspot:hover,
+.hotspot:focus-visible {
+  text-decoration: none;
+  outline: 2px solid rgba(34, 96, 165, 0.45);
+  outline-offset: 4px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hotspot--menu {
+  top: 17%;
+}
+
+.hotspot--blog {
+  top: 41.5%;
+}
+
+.hotspot--about {
+  top: 62%;
+}
+
+.cover-address {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: max(0.85rem, var(--safe-bottom));
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  font-size: 0.625rem;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: rgba(40, 48, 58, 0.72);
+  pointer-events: none;
+}
+
+/* About */
+.about-header {
+  padding-top: calc(var(--section-space) * 0.6);
+  padding-bottom: 2rem;
+}
+
+.about-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.about-body {
+  max-width: 48ch;
+  padding-bottom: var(--section-space);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-body p {
+  margin: 0;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -692,9 +804,19 @@ a:hover {
   }
 
   .drinks-title,
-  .upcoming-title {
+  .upcoming-title,
+  .about-title {
     font-size: clamp(2rem, 12vw, 3.5rem);
     line-height: 0.95;
+  }
+
+  .about-header {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .about-body {
+    max-width: none;
   }
 
   .drinks-list {

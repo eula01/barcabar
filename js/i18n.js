@@ -13,12 +13,14 @@ const FLAG_SVG = {
 const T = {
   en: {
     "meta.title.home": "Barcabar",
-    "meta.title.drinks": "Drinks — Barcabar",
-    "meta.title.upcoming": "Upcoming — Barcabar",
+    "meta.title.drinks": "Menu — Barcabar",
+    "meta.title.upcoming": "Blog — Barcabar",
+    "meta.title.about": "About — Barcabar",
     "lang.group": "Language",
     "nav.home": "Home",
-    "nav.drinks": "Drinks",
-    "nav.upcoming": "Upcoming",
+    "nav.drinks": "Menu",
+    "nav.upcoming": "Blog",
+    "nav.about": "About",
     "newsletter.btn": "Newsletter",
     "newsletter.close": "Close",
     "newsletter.title": "Newsletter",
@@ -32,9 +34,13 @@ const T = {
     "home.hours":
       "Open Wednesday through to Sunday til late (?), with our 01366 friends spinning vinyl on the weekends. We recommend booking to save a space but we'll always try to accommodate walk-ins.",
     "home.imagePlaceholder": "Image placeholder",
-    "drinks.title": "Drinks",
+    "drinks.title": "Menu",
     "drinks.disclaimer":
       "Our drinks, wines and spirits carry a maker's touch and rotate often. The team can answer questions on allergies and aversions — not every ingredient is listed on the menu, so please speak to us before you order. A full allergen list is available on request.",
+    "about.title": "About",
+    "about.p1": "A Poblenou bar from Anna, Joey and team.",
+    "about.p2":
+      "Open Wednesday through Sunday til late, with our 01366 friends spinning vinyl on the weekends. We recommend booking to save a space but we'll always try to accommodate walk-ins.",
     "drinks.tomatillo.desc":
       "Tequila, pineapple and tomatillo verde shaken with Scotch bon agave heat and a Tajín rim.",
     "drinks.persepolis.desc":
@@ -63,7 +69,7 @@ const T = {
       "Dirty, savoury martini of fat-washed vodka or gin, dry vermouth, MSG and savoury bitters with mang gong cake.",
     "drinks.sazerac.desc":
       "Prebatched Tuaca, cognac and rye stirred with Peychaud's, absinthe and saline — rich, herbal, medicinal, short.",
-    "upcoming.title": "Upcoming",
+    "upcoming.title": "Blog",
     "upcoming.e1.date": "Thu, 18 Jun",
     "upcoming.e1.title": "01366 OFFBCN 26̸Objekt, Adriana Lopez, DJ TOOL, Memory Palace & Myrcene",
     "upcoming.e1.lineup": "Objekt, Adriana Lopez, DJ TOOL, Memory Palace, Myrcene, Joey Stella",
@@ -77,12 +83,14 @@ const T = {
   },
   es: {
     "meta.title.home": "Barcabar",
-    "meta.title.drinks": "Bebidas — Barcabar",
-    "meta.title.upcoming": "Próximos — Barcabar",
+    "meta.title.drinks": "Menú — Barcabar",
+    "meta.title.upcoming": "Blog — Barcabar",
+    "meta.title.about": "Sobre — Barcabar",
     "lang.group": "Idioma",
     "nav.home": "Inicio",
-    "nav.drinks": "Bebidas",
-    "nav.upcoming": "Próximos",
+    "nav.drinks": "Menú",
+    "nav.upcoming": "Blog",
+    "nav.about": "Sobre",
     "newsletter.btn": "Boletín",
     "newsletter.close": "Cerrar",
     "newsletter.title": "Boletín",
@@ -96,9 +104,13 @@ const T = {
     "home.hours":
       "Abierto de miércoles a domingo hasta tarde (?), con nuestros amigos de 01366 poniendo vinilos los fines de semana. Recomendamos reservar para asegurar sitio, pero siempre intentamos acoger sin reserva.",
     "home.imagePlaceholder": "Imagen provisional",
-    "drinks.title": "Bebidas",
+    "drinks.title": "Menú",
     "drinks.disclaimer":
       "Nuestras bebidas, vinos y destilados llevan la huella del artesano y rotan a menudo. El equipo puede resolver dudas sobre alergias y aversiones — no todos los ingredientes figuran en la carta; háblanos antes de pedir. Lista completa de alérgenos disponible bajo petición.",
+    "about.title": "Sobre",
+    "about.p1": "Un bar de Poblenou de Anna, Joey y equipo.",
+    "about.p2":
+      "Abierto de miércoles a domingo hasta tarde, con nuestros amigos de 01366 poniendo vinilos los fines de semana. Recomendamos reservar para asegurar sitio, pero siempre intentamos acoger sin reserva.",
     "drinks.tomatillo.desc":
       "Tequila, piña y verde de tomatillo, batido con agave picante de Scotch bon y borde de Tajín.",
     "drinks.persepolis.desc":
@@ -127,7 +139,7 @@ const T = {
       "Martini salado y untuoso de vodka o gin fat-washed, vermut seco, MSG y bitters salados con mang gong.",
     "drinks.sazerac.desc":
       "Tuaca, coñac y rye premezclados con Peychaud's, absenta y salina — rico, herbal, medicinal, corto.",
-    "upcoming.title": "Próximos",
+    "upcoming.title": "Blog",
     "upcoming.e1.date": "Jue, 18 jun",
     "upcoming.e1.title": "01366 OFFBCN 26̸Objekt, Adriana Lopez, DJ TOOL, Memory Palace & Myrcene",
     "upcoming.e1.lineup": "Objekt, Adriana Lopez, DJ TOOL, Memory Palace, Myrcene, Joey Stella",
@@ -141,12 +153,14 @@ const T = {
   },
   ca: {
     "meta.title.home": "Barcabar",
-    "meta.title.drinks": "Begudes — Barcabar",
-    "meta.title.upcoming": "Propers — Barcabar",
+    "meta.title.drinks": "Menú — Barcabar",
+    "meta.title.upcoming": "Blog — Barcabar",
+    "meta.title.about": "Sobre — Barcabar",
     "lang.group": "Idioma",
     "nav.home": "Inici",
-    "nav.drinks": "Begudes",
-    "nav.upcoming": "Propers",
+    "nav.drinks": "Menú",
+    "nav.upcoming": "Blog",
+    "nav.about": "Sobre",
     "newsletter.btn": "Butlletí",
     "newsletter.close": "Tancar",
     "newsletter.title": "Butlletí",
@@ -160,9 +174,13 @@ const T = {
     "home.hours":
       "Obert de dimecres a diumenge fins tard (?), amb els amics de 01366 posant vinils el cap de setmana. Recomanem reservar per assegurar lloc, però sempre intentem acollir sense reserva.",
     "home.imagePlaceholder": "Imatge provisional",
-    "drinks.title": "Begudes",
+    "drinks.title": "Menú",
     "drinks.disclaimer":
       "Les nostres begudes, vins i destil·lats porten empremta d'artesà i giren sovint. L'equip respon dubtes sobre al·lèrgies i aversions — no tots els ingredients surten a la carta; parla'ns abans de demanar. Llista completa d'al·lèrgens disponible sota petició.",
+    "about.title": "Sobre",
+    "about.p1": "Un bar del Poblenou d'Anna, Joey i equip.",
+    "about.p2":
+      "Obert de dimecres a diumenge fins tard, amb els amics de 01366 posant vinils el cap de setmana. Recomanem reservar per assegurar lloc, però sempre intentem acollir sense reserva.",
     "drinks.tomatillo.desc":
       "Tequila, pinya i verde de tomatillo, sacsejat amb agave picant de Scotch bon i vora de Tajín.",
     "drinks.persepolis.desc":
@@ -191,7 +209,7 @@ const T = {
       "Martini salat i untuós de vodka o gin fat-washed, vermut sec, MSG i bitters salats amb mang gong.",
     "drinks.sazerac.desc":
       "Tuaca, conyac i rye premesclats amb Peychaud's, absenta i salina — ric, herbal, medicinal, curt.",
-    "upcoming.title": "Propers",
+    "upcoming.title": "Blog",
     "upcoming.e1.date": "Dj, 18 jun",
     "upcoming.e1.title": "01366 OFFBCN 26̸Objekt, Adriana Lopez, DJ TOOL, Memory Palace & Myrcene",
     "upcoming.e1.lineup": "Objekt, Adriana Lopez, DJ TOOL, Memory Palace, Myrcene, Joey Stella",
@@ -211,6 +229,7 @@ function getPageId() {
   const path = window.location.pathname;
   if (path.includes("/drinks")) return "drinks";
   if (path.includes("/upcoming")) return "upcoming";
+  if (path.includes("/about")) return "about";
   return "home";
 }
 
@@ -269,10 +288,10 @@ function renderLangSwitcher() {
 }
 
 const WIDTH_LOCK_SELECTOR =
-  ".site-header nav a[data-i18n], #newsletter-open[data-i18n], .event-date[data-i18n], .footer-label[data-i18n], #newsletter-close[data-i18n], .newsletter-form [data-i18n], .modal-title[data-i18n], .drinks-title[data-i18n], .upcoming-title[data-i18n]";
+  ".site-header nav a[data-i18n], #newsletter-open[data-i18n], .event-date[data-i18n], .footer-label[data-i18n], #newsletter-close[data-i18n], .newsletter-form [data-i18n], .modal-title[data-i18n], .drinks-title[data-i18n], .upcoming-title[data-i18n], .about-title[data-i18n]";
 
 const HEIGHT_LOCK_SELECTOR =
-  ".about-text[data-i18n], .split-text[data-i18n], .drinks-subheading[data-i18n], .drink-desc[data-i18n], .event-title[data-i18n], .event-lineup[data-i18n], .event-location-row > span[data-i18n], li[data-i18n][data-i18n-html]";
+  ".about-text[data-i18n], .about-body p[data-i18n], .split-text[data-i18n], .drinks-subheading[data-i18n], .drink-desc[data-i18n], .event-title[data-i18n], .event-lineup[data-i18n], .event-location-row > span[data-i18n], li[data-i18n][data-i18n-html]";
 
 function createProbe(el, widthPx) {
   const probe = document.createElement("div");

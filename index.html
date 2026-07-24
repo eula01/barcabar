@@ -7,21 +7,29 @@
   <title>Barcabar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Metamorphous&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body data-page="home" class="home-cover">
   <main class="cover" aria-label="Barcabar">
     <div class="cover-stage">
-      <img
-        class="cover-img"
-        src="/images/page.jpeg"
-        alt="Barcabar — three tartan lions"
-        width="1080"
-        height="1350"
-        decoding="async"
-        fetchpriority="high"
-      >
+      <picture>
+        <source
+          media="(min-width: 1025px)"
+          srcset="/images/pagewide.jpg"
+          width="1920"
+          height="1080"
+        >
+        <img
+          class="cover-img"
+          src="/images/page.jpeg"
+          alt="Barcabar — three tartan lions"
+          width="1080"
+          height="1350"
+          decoding="async"
+          fetchpriority="high"
+        >
+      </picture>
       <nav class="cover-hotspots" aria-label="Primary">
         <a class="hotspot hotspot--menu" href="/drinks/" data-i18n="nav.drinks">Menu</a>
         <a class="hotspot hotspot--blog" href="/upcoming/" data-i18n="nav.upcoming">Blog</a>

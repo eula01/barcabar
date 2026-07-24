@@ -1,5 +1,5 @@
 :root {
-  --blue: #2260a5;
+  --blue: #8b0402;
   --success: #1a6b3c;
   --max-width: 1400px;
   --page-padding: clamp(1rem, 4vw, 3rem);
@@ -38,18 +38,12 @@ body {
 
 /*
   Home cover
-  Image is 1080×1350 (4:5 = 0.8).
+  - Small/medium: page.jpeg 1080×1350 (4:5)
+  - Large (≥1025px): pagewide.jpg 1920×1080 (16:9) with blurred side wings
 
-  iPhone CSS viewports are ~0.46–0.56 (e.g. 390×844, 375×667) — taller
-  than 4:5 — so contain letterboxes top/bottom. Cover crops left/right
-  instead; lions stay centered so that crop is fine.
-
-  Strategy:
-  - Tall / small screens (phones, portrait tablets): COVER the viewport
-    (no top/bottom bars). Stage is larger than the viewport on the
-    horizontal axis and centered.
-  - Wide screens (desktop, landscape tablets): CONTAIN so the full
-    image stays visible; side bars use the parchment background.
+  Portrait phones are taller than 4:5, so we COVER (crop sides). Large
+  uses COVER against the 16:9 art so the winged sides absorb ultrawide
+  crop and the center lions stay framed.
 */
 body.home-cover {
   background: #d4cfc4;
@@ -67,7 +61,7 @@ body.home-cover {
   overflow: hidden;
 }
 
-/* Default: contain (full image, possible side bars) */
+/* Default (portrait art): contain */
 .cover-stage {
   position: relative;
   flex-shrink: 0;
@@ -75,18 +69,17 @@ body.home-cover {
   height: min(100dvh, calc(100vw * 1350 / 1080));
 }
 
+.cover-stage picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /* Cover when the viewport is taller/narrower than 4:5, or phone-sized */
 @media (max-aspect-ratio: 1080 / 1350), (max-width: 768px) {
   .cover-stage {
     width: max(100vw, calc(100dvh * 1080 / 1350));
     height: max(100dvh, calc(100vw * 1350 / 1080));
-  }
-}
-
-/* Large desktop: keep contain, nudge type up slightly with the stage */
-@media (min-width: 1025px) {
-  .hotspot {
-    font-size: clamp(1.1rem, 1.35vw, 1.6rem);
   }
 }
 
@@ -113,10 +106,10 @@ body.home-cover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "IBM Plex Mono", "Courier New", monospace;
-  font-size: clamp(0.85rem, 3.6vw, 1.45rem);
+  font-family: "Metamorphous", "Times New Roman", serif;
+  font-size: clamp(0.95rem, 3.8vw, 1.55rem);
   font-weight: 400;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
   text-shadow:
@@ -166,12 +159,44 @@ body.home-cover {
 
 @media (max-width: 480px) {
   .hotspot {
-    font-size: clamp(0.8rem, 4.2vw, 1.1rem);
-    letter-spacing: 0.12em;
+    font-size: clamp(0.9rem, 4.4vw, 1.2rem);
+    letter-spacing: 0.06em;
   }
 
   .cover-address {
     font-size: 0.55rem;
+  }
+}
+
+/* Large: pagewide 16:9 — fill viewport; wings absorb side crop */
+@media (min-width: 1025px) {
+  .cover-stage {
+    width: max(100vw, calc(100dvh * 1920 / 1080));
+    height: max(100dvh, calc(100vw * 1080 / 1920));
+  }
+
+  .hotspot {
+    left: 37%;
+    width: 26%;
+    height: 20%;
+    font-size: clamp(1.15rem, 1.5vw, 1.75rem);
+  }
+
+  .hotspot--menu {
+    top: 16%;
+  }
+
+  .hotspot--blog {
+    top: 40%;
+  }
+
+  .hotspot--about {
+    top: 61%;
+  }
+
+  .cover-address {
+    font-size: 0.7rem;
+    color: rgba(40, 48, 58, 0.78);
   }
 }
 
@@ -211,9 +236,9 @@ a:hover {
 }
 
 .sans {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: "Metamorphous", "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   line-height: 1.05;
 }
 
@@ -298,7 +323,7 @@ a:hover {
   width: 1.5rem;
   height: 1rem;
   display: block;
-  border: 1px solid rgba(34, 96, 165, 0.15);
+  border: 1px solid rgba(139, 4, 2, 0.15);
 }
 
 .lang-btn.is-active {
@@ -415,7 +440,7 @@ a:hover {
 .split-image {
   width: 50%;
   max-width: 100%;
-  background: rgba(34, 96, 165, 0.06);
+  background: rgba(139, 4, 2, 0.06);
 }
 
 .split-image img {
@@ -537,7 +562,7 @@ a:hover {
 
 .event-poster {
   aspect-ratio: 3 / 4;
-  background: rgba(34, 96, 165, 0.06);
+  background: rgba(139, 4, 2, 0.06);
   overflow: hidden;
 }
 
@@ -605,7 +630,7 @@ a:hover {
 }
 
 .event-icon--flag svg {
-  border: 1px solid rgba(34, 96, 165, 0.15);
+  border: 1px solid rgba(139, 4, 2, 0.15);
 }
 
 .event-meta {
@@ -625,8 +650,8 @@ a:hover {
 }
 
 .footer-label {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Metamorphous", "Times New Roman", serif;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 0.7rem;
   letter-spacing: 0.06em;
@@ -723,7 +748,7 @@ a:hover {
 }
 
 .newsletter-form input::placeholder {
-  color: rgba(34, 96, 165, 0.4);
+  color: rgba(139, 4, 2, 0.4);
 }
 
 .newsletter-form button[type="submit"] {

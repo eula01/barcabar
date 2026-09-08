@@ -4,45 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#d4cfc4">
-  <title>Barcabar</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Metamorphous&display=swap" rel="stylesheet">
+  <title>The Strangeways</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body data-page="home" class="home-cover">
-  <main class="cover" aria-label="Barcabar">
-    <div class="cover-stage">
-      <picture>
-        <source
-          media="(min-width: 1025px)"
-          srcset="/images/pagewide.jpg"
-          width="1920"
-          height="1080"
-        >
-        <img
-          class="cover-img"
-          src="/images/page.jpeg"
-          alt="Barcabar — three tartan lions"
-          width="1080"
-          height="1350"
-          decoding="async"
-          fetchpriority="high"
-        >
-      </picture>
-      <nav class="cover-hotspots" aria-label="Primary">
-        <a class="hotspot hotspot--menu" href="/drinks/" data-i18n="nav.drinks">Menu</a>
-        <a class="hotspot hotspot--blog" href="/upcoming/" data-i18n="nav.upcoming">Blog</a>
-        <a class="hotspot hotspot--about" href="/about/" data-i18n="nav.about">About</a>
-      </nav>
-    </div>
-    <p class="cover-address" data-i18n="footer.address" data-i18n-html="true">
-      Carrer de Pujades, 33, Sant Martí,<br>
-      08018 Barcelona, Spain
-    </p>
+  <main class="strangeways-home" aria-label="The Strangeways">
+    <a class="home-name" href="/" aria-label="The Strangeways home">The Strangeways</a>
+    <nav class="home-nav" aria-label="Primary navigation">
+      <a class="home-link home-link--menu" href="/drinks/">menu</a>
+      <a class="home-link home-link--about" href="/about/">about</a>
+      <a class="home-link home-link--more" href="/upcoming/">more</a>
+    </nav>
+    <img class="home-lions" src="/images/lion-trio-green.png" alt="Three lions" width="5987" height="9101">
   </main>
-
-  <script src="/js/i18n.js"></script>
-  <script src="/js/main.js"></script>
 </body>
 </html>

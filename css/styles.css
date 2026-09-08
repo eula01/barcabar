@@ -638,6 +638,179 @@ a:hover {
   font-size: 0.75rem;
 }
 
+/* The Strangeways art direction */
+@font-face {
+  font-family: "Manufacturing Consent";
+  src: url("/fonts/ManufacturingConsent-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iowan Old Style";
+  src: url("/fonts/IowanOldStyle-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --pink: #fa454b;
+  --green: #159447;
+  --ink: #0b0b0b;
+  --paper: #fa454b;
+  --blue: var(--ink);
+  --max-width: 1500px;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", Georgia, serif;
+  line-height: 1.45;
+}
+
+a { text-decoration-thickness: 1px; }
+
+.sans,
+.home-link {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  text-transform: none;
+}
+
+body.home-cover {
+  height: 100dvh;
+  min-height: 560px;
+  overflow: hidden;
+  background: var(--pink);
+}
+
+.strangeways-home {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--pink);
+}
+
+.home-name {
+  position: absolute;
+  z-index: 2;
+  left: clamp(1.5rem, 3.1vw, 3.8rem);
+  top: 47%;
+  color: var(--ink);
+  font-family: "Manufacturing Consent", Georgia, serif;
+  font-size: clamp(1.8rem, 2.8vw, 3.4rem);
+  font-weight: 400;
+  letter-spacing: -.025em;
+  line-height: .95;
+  transform: translateY(-50%);
+}
+
+.home-name:hover { text-decoration: none; }
+
+.home-nav { position: absolute; inset: 0; z-index: 3; }
+
+.home-link {
+  position: absolute;
+  color: var(--ink);
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-style: italic;
+  line-height: 1;
+}
+
+.home-link:hover,
+.home-link:focus-visible {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.home-link--menu { top: clamp(1.5rem, 2vw, 3rem); left: 50%; transform: translateX(-50%); }
+.home-link--about { top: 47%; left: 50%; transform: translate(-50%, -50%); }
+.home-link--more { bottom: clamp(1.5rem, 2vw, 3rem); left: 50%; transform: translateX(-50%); }
+
+.home-lions {
+  position: absolute;
+  width: clamp(140px, 15vw, 290px);
+  height: auto;
+  right: clamp(.75rem, 1.5vw, 2rem);
+  top: 32%;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+  opacity: .98;
+  pointer-events: none;
+}
+
+.site-header {
+  position: sticky;
+  padding: 1rem 0;
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.header-inner { gap: 1rem; }
+.back-link {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: .8rem;
+  font-style: italic;
+}
+.site-header nav { gap: .45rem clamp(.75rem, 2vw, 1.75rem); font-size: .7rem; }
+.site-header nav a { min-height: unset; padding: .25rem 0; color: var(--ink); }
+.header-name {
+  margin-left: auto;
+  font-family: "Manufacturing Consent", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  white-space: nowrap;
+}
+
+.page { padding-top: 0; }
+.about-header, .drinks-header, .upcoming-header { padding-top: clamp(3rem, 8vw, 8rem); }
+.about-title, .drinks-title, .upcoming-title {
+  color: var(--green);
+  font-family: "Manufacturing Consent", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  text-transform: none;
+  font-size: clamp(4rem, 12vw, 11rem);
+  line-height: .72;
+}
+
+.about-body { max-width: 43rem; gap: 1.5rem; padding-bottom: clamp(5rem, 12vw, 10rem); }
+.about-body p { font-family: "Iowan Old Style", Georgia, serif; font-size: clamp(1.15rem, 2.4vw, 2rem); line-height: 1.34; }
+.drinks-subheading { max-width: 58rem; font-size: .75rem; }
+.drinks-list { gap: 0; border-top: 1px solid var(--ink); }
+.drink-item { grid-template-columns: minmax(11rem, 30%) 1fr; gap: 2rem; padding: 1.15rem 0; border-bottom: 1px solid var(--ink); }
+.drink-name { font-family: "Iowan Old Style", Georgia, serif; font-size: clamp(1.1rem, 2.4vw, 1.8rem); text-transform: none; letter-spacing: -.04em; }
+.drink-desc { max-width: 60ch; font-size: .75rem; }
+
+.more-intro { max-width: 36rem; margin: 3rem 0 1.25rem; font-family: "Iowan Old Style", Georgia, serif; font-size: clamp(1.15rem, 2.4vw, 2rem); line-height: 1.35; }
+.instagram-link { display: inline-block; margin-bottom: 4rem; padding: .7rem .9rem; background: var(--green); color: var(--paper); font-size: .7rem; text-transform: uppercase; letter-spacing: .04em; }
+.instagram-link:hover { color: var(--pink); text-decoration: none; }
+.events-grid { max-width: none; gap: clamp(1.25rem, 3vw, 3rem); }
+.event-poster { background: var(--pink); }
+.event-date, .event-title, .event-lineup, .event-location-row { font-size: .7rem; }
+.event-title { font-family: "Iowan Old Style", Georgia, serif; font-size: 1rem; text-transform: none; letter-spacing: -.02em; }
+
+.site-footer { padding-top: 2rem; padding-bottom: 2rem; border-top: 1px solid var(--ink); }
+.footer-label { font-family: "Iowan Old Style", Georgia, serif; font-size: .65rem; }
+.footer-links { font-size: .7rem; }
+
+@media (max-width: 640px) {
+  body.home-cover { min-height: 500px; }
+  .home-name { top: 43%; left: 1.25rem; font-size: clamp(1.7rem, 8vw, 2.5rem); }
+  .home-link { font-size: 2rem; }
+  .home-link--about { top: 57%; left: 42%; }
+  .home-lions { width: 30vw; height: auto; top: 33%; right: .65rem; }
+  .header-inner { align-items: flex-start; }
+  .header-name { font-size: 1rem; }
+  .site-header nav { gap: .3rem .7rem; font-size: .61rem; }
+  .drink-item { grid-template-columns: 1fr; gap: .45rem; }
+}
+
 /* Footer */
 .site-footer {
   padding-top: var(--section-space);

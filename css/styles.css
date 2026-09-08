@@ -804,7 +804,9 @@ body.home-cover {
 .instagram-link { display: inline-block; margin-bottom: 4rem; padding: .7rem .9rem; background: var(--green); color: var(--ink); font-size: .7rem; text-transform: uppercase; letter-spacing: .04em; }
 .instagram-link:hover { color: var(--ink); text-decoration: none; }
 .instagram-embed { width: min(100%, 540px); margin-bottom: var(--section-space); }
-.instagram-embed .instagram-media { min-width: 0 !important; width: 100% !important; margin: 0 !important; }
+.instagram-profile-card { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1.25rem; border: 1px solid var(--ink); font-size: .7rem; }
+.instagram-profile-card:hover { color: var(--green); text-decoration: none; }
+.instagram-profile-name { font-family: "Iowan Old Style", Georgia, serif; font-size: 1.5rem; }
 .events-grid { max-width: none; gap: clamp(1.25rem, 3vw, 3rem); }
 .event-poster { background: var(--pink); }
 .event-date, .event-title, .event-lineup, .event-location-row { font-size: .7rem; }

@@ -12,10 +12,10 @@ const FLAG_SVG = {
 
 const T = {
   en: {
-    "meta.title.home": "Barcabar",
-    "meta.title.drinks": "Menu — Barcabar",
-    "meta.title.upcoming": "Blog — Barcabar",
-    "meta.title.about": "About — Barcabar",
+    "meta.title.home": "The Strangeways",
+    "meta.title.drinks": "Menu — The Strangeways",
+    "meta.title.upcoming": "More — The Strangeways",
+    "meta.title.about": "About — The Strangeways",
     "lang.group": "Language",
     "nav.home": "Home",
     "nav.drinks": "Menu",
@@ -39,8 +39,7 @@ const T = {
       "Our drinks, wines and spirits carry a maker's touch and rotate often. The team can answer questions on allergies and aversions — not every ingredient is listed on the menu, so please speak to us before you order. A full allergen list is available on request.",
     "about.title": "About",
     "about.p1": "A Poblenou bar from Anna, Joey and team.",
-    "about.p2":
-      "Open Wednesday through Sunday til late, with our 01366 friends spinning vinyl on the weekends. We recommend booking to save a space but we'll always try to accommodate walk-ins.",
+    "about.p2": "Open Wednesday through Sunday till late.",
     "drinks.tomatillo.desc":
       "Tequila, pineapple and tomatillo verde shaken with Scotch bon agave heat and a Tajín rim.",
     "drinks.persepolis.desc":
@@ -69,7 +68,9 @@ const T = {
       "Dirty, savoury martini of fat-washed vodka or gin, dry vermouth, MSG and savoury bitters with mang gong cake.",
     "drinks.sazerac.desc":
       "Prebatched Tuaca, cognac and rye stirred with Peychaud's, absinthe and saline — rich, herbal, medicinal, short.",
-    "upcoming.title": "Blog",
+    "upcoming.title": "More",
+    "upcoming.intro": "News, events and records from The Strangeways, WYDWWYH and 01366.",
+    "upcoming.instagram": "Follow @thestrangeways_ on Instagram ↗",
     "upcoming.e1.date": "Thu, 18 Jun",
     "upcoming.e1.title": "01366 OFFBCN 26̸Objekt, Adriana Lopez, DJ TOOL, Memory Palace & Myrcene",
     "upcoming.e1.lineup": "Objekt, Adriana Lopez, DJ TOOL, Memory Palace, Myrcene, Joey Stella",
@@ -82,10 +83,10 @@ const T = {
     "upcoming.e2.country": "United Kingdom",
   },
   es: {
-    "meta.title.home": "Barcabar",
-    "meta.title.drinks": "Menú — Barcabar",
-    "meta.title.upcoming": "Blog — Barcabar",
-    "meta.title.about": "Sobre — Barcabar",
+    "meta.title.home": "The Strangeways",
+    "meta.title.drinks": "Menú — The Strangeways",
+    "meta.title.upcoming": "Más — The Strangeways",
+    "meta.title.about": "Sobre — The Strangeways",
     "lang.group": "Idioma",
     "nav.home": "Inicio",
     "nav.drinks": "Menú",
@@ -109,8 +110,7 @@ const T = {
       "Nuestras bebidas, vinos y destilados llevan la huella del artesano y rotan a menudo. El equipo puede resolver dudas sobre alergias y aversiones — no todos los ingredientes figuran en la carta; háblanos antes de pedir. Lista completa de alérgenos disponible bajo petición.",
     "about.title": "Sobre",
     "about.p1": "Un bar de Poblenou de Anna, Joey y equipo.",
-    "about.p2":
-      "Abierto de miércoles a domingo hasta tarde, con nuestros amigos de 01366 poniendo vinilos los fines de semana. Recomendamos reservar para asegurar sitio, pero siempre intentamos acoger sin reserva.",
+    "about.p2": "Abierto de miércoles a domingo hasta tarde.",
     "drinks.tomatillo.desc":
       "Tequila, piña y verde de tomatillo, batido con agave picante de Scotch bon y borde de Tajín.",
     "drinks.persepolis.desc":
@@ -139,7 +139,9 @@ const T = {
       "Martini salado y untuoso de vodka o gin fat-washed, vermut seco, MSG y bitters salados con mang gong.",
     "drinks.sazerac.desc":
       "Tuaca, coñac y rye premezclados con Peychaud's, absenta y salina — rico, herbal, medicinal, corto.",
-    "upcoming.title": "Blog",
+    "upcoming.title": "Más",
+    "upcoming.intro": "Noticias, eventos y discos de The Strangeways, WYDWWYH y 01366.",
+    "upcoming.instagram": "Sigue a @thestrangeways_ en Instagram ↗",
     "upcoming.e1.date": "Jue, 18 jun",
     "upcoming.e1.title": "01366 OFFBCN 26̸Objekt, Adriana Lopez, DJ TOOL, Memory Palace & Myrcene",
     "upcoming.e1.lineup": "Objekt, Adriana Lopez, DJ TOOL, Memory Palace, Myrcene, Joey Stella",
@@ -152,10 +154,10 @@ const T = {
     "upcoming.e2.country": "Reino Unido",
   },
   ca: {
-    "meta.title.home": "Barcabar",
-    "meta.title.drinks": "Menú — Barcabar",
-    "meta.title.upcoming": "Blog — Barcabar",
-    "meta.title.about": "Sobre — Barcabar",
+    "meta.title.home": "The Strangeways",
+    "meta.title.drinks": "Menú — The Strangeways",
+    "meta.title.upcoming": "Més — The Strangeways",
+    "meta.title.about": "Sobre — The Strangeways",
     "lang.group": "Idioma",
     "nav.home": "Inici",
     "nav.drinks": "Menú",
@@ -179,8 +181,7 @@ const T = {
       "Les nostres begudes, vins i destil·lats porten empremta d'artesà i giren sovint. L'equip respon dubtes sobre al·lèrgies i aversions — no tots els ingredients surten a la carta; parla'ns abans de demanar. Llista completa d'al·lèrgens disponible sota petició.",
     "about.title": "Sobre",
     "about.p1": "Un bar del Poblenou d'Anna, Joey i equip.",
-    "about.p2":
-      "Obert de dimecres a diumenge fins tard, amb els amics de 01366 posant vinils el cap de setmana. Recomanem reservar per assegurar lloc, però sempre intentem acollir sense reserva.",
+    "about.p2": "Obert de dimecres a diumenge fins tard.",
     "drinks.tomatillo.desc":
       "Tequila, pinya i verde de tomatillo, sacsejat amb agave picant de Scotch bon i vora de Tajín.",
     "drinks.persepolis.desc":
@@ -209,7 +210,9 @@ const T = {
       "Martini salat i untuós de vodka o gin fat-washed, vermut sec, MSG i bitters salats amb mang gong.",
     "drinks.sazerac.desc":
       "Tuaca, conyac i rye premesclats amb Peychaud's, absenta i salina — ric, herbal, medicinal, curt.",
-    "upcoming.title": "Blog",
+    "upcoming.title": "Més",
+    "upcoming.intro": "Notícies, esdeveniments i discos de The Strangeways, WYDWWYH i 01366.",
+    "upcoming.instagram": "Segueix @thestrangeways_ a Instagram ↗",
     "upcoming.e1.date": "Dj, 18 jun",
     "upcoming.e1.title": "01366 OFFBCN 26̸Objekt, Adriana Lopez, DJ TOOL, Memory Palace & Myrcene",
     "upcoming.e1.lineup": "Objekt, Adriana Lopez, DJ TOOL, Memory Palace, Myrcene, Joey Stella",
